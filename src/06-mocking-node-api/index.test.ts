@@ -1,4 +1,8 @@
-import { readFileAsynchronously, doStuffByTimeout, doStuffByInterval } from './index';
+import {
+  readFileAsynchronously,
+  doStuffByTimeout,
+  doStuffByInterval,
+} from './index';
 import { existsSync } from 'fs';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
@@ -28,7 +32,7 @@ describe('doStuffByTimeout', () => {
     const callback = jest.fn();
 
     doStuffByTimeout(callback, 1000);
-    
+
     // Fast-forward until all timers have been executed
     jest.runAllTimers();
 
@@ -85,7 +89,7 @@ describe('doStuffByInterval', () => {
 describe('readFileAsynchronously', () => {
   test('should call join with pathToFile', async () => {
     await readFileAsynchronously('testFile.txt');
-    
+
     expect(join).toHaveBeenCalledWith(__dirname, 'testFile.txt');
   });
 

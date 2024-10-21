@@ -24,7 +24,7 @@ describe('simpleCalculator', () => {
     ({ a, b, action, expected }) => {
       const result = simpleCalculator({ a, b, action });
       expect(result).toBe(expected);
-    }
+    },
   );
 
   // Invalid input test cases
@@ -33,6 +33,6 @@ describe('simpleCalculator', () => {
     ({ a, b, action, expected }) => {
       const result = simpleCalculator({ a, b, action });
       expect(result).toBe(expected);
-    }
+    },
   );
 });
